@@ -7,7 +7,6 @@ const test = (param) => {
         else{
             param = param + 1
         }
-
         count++
     }
     return count;
