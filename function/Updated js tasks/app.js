@@ -32,7 +32,6 @@ console.log(evenOdd([1, 4, 5, 8, 7, 6]));
 //task3
 
 
-
 //task4
 function reverse(arr) {
     let reversedArray = [];
