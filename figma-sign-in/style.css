@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+
+
+body{
+    background-color: #E5E5E5;
+}
+
+.container{
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+
+}
+
+.parent{
+    width: 100%;
+}
+
+.red-border {
+    border: 2px solid red;
+  }
+
+.active{
+    background-color: black;
+    color: white;
+}
+form .p{
+    display: none;
+}
+
+.parent p{
+    color: gray;
+    padding: 11px 0;
+}
+
+.sign-in-parent{
+    padding: 80px 0 30px 0px;
+    width: 24%;
+    margin: 0 auto;
+}
+.text{
+    text-align:center;
+}
+.text h1{
+    font-size: 3.3rem;
+}
+
+form{
+    width: 80%;
+    margin: auto;
+}
+form .input{
+    width: 100%;
+    background-color:#224957;
+    margin: 0.6rem 0;
+    font-size: 1rem;
+    color: white;
+    /* border: 0; */
+    /* outline: none; */
+    padding: 0.5rem 2.3rem 0.5rem 0;
+    border-radius: 6px;
+}
+
+.remem{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    align-items:center;
+    gap: 20px;
+}
+.remem span{
+    padding-top: 15px;
+}
+.div{
+    padding-top: 5px;
+}
+.rem-button{
+    padding: 10px;
+    background-color:#224957;
+    border:0;
+    border-radius: 6px;
+    margin-top:20px ;
+    margin-left: 30px;
+
+}
+
+
+.btn{
+    padding-top: 50px;
+    width: 80%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.btn button{
+    width: 100%;
+    padding: 0.6rem 7rem;
+    border:0;
+    background-color:#20DF7F ;
+    border-radius: 6px;
+    font-size: large;
+    cursor: pointer;
+    text-align: center;
+}
+
+.image{
+    width: 100%;
+    position: relative;
+}
+.image img{
+    width: 100%;
+}
+.dark-l{
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.dark-l button{
+    padding: 1.2rem 1.2rem;
+    border-radius: 50%;
+    border:0;
+    border: 8px solid white;
+    cursor: pointer;
+}
+
+
+
+
+
+@media (max-width:1230px) {
+    .sign-in-parent{
+        width: 30%;
+    }
+    form{
+        width: 100%;
+    }
+    .remem{
+        flex-wrap: wrap;
+        justify-content: start;
+        padding: 0;
+        margin: 0;
+        left: 0;
+    }
+    .remem .for{
+        padding-left: 30px ;
+        margin: 0;
+        left: 50px;
+    }
+    
+    
+}
+@media (max-width:1042px) {
+    .dark-l button{
+        padding: 1rem 1rem;
+    }
+    .dark-l{
+        bottom: 20px;
+        left: 20px;
+    }
+    
+}
+
+@media (max-width:800px) {
+    .sign-in-parent{
+        width: 50%;
+    }
+    form{
+        width: 100%;
+    }
+    .dark-l button{
+        padding: 0.7rem 0.7rem;
+    }
+    .dark-l{
+        bottom: 15px;
+        left: 15px;
+    }
+    
+}
+@media (max-width:580px) {
+    .sign-in-parent{
+        width: 70%;
+    }
+    form{
+        width: 100%;
+    }
+    .dark-l button{
+        padding: 0.5rem 0.5rem;
+    }
+    .dark-l{
+        bottom: 10px;
+        left: 10px;
+    }
+    
+}
+@media (max-width:410px) {
+    .sign-in-parent{
+        width: 80%;
+    }
+    form{
+        width: 100%;
+    }
+    .dark-l button{
+        padding: 0.3rem 0.3rem;
+    }
+    .dark-l{
+        bottom: 7px;
+        left: 7px;
+    }
+    
+}
