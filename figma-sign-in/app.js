@@ -35,10 +35,10 @@ loginBtn.addEventListener("click", () => {
     if (validEmail && validPassword) {
 
     }
-    else if (!validEmail) {
+    if (!validEmail) {
         p2.style.display = "block"
     }
-    else if (!validPassword) {
+    if (!validPassword) {
         p3.style.display = "block"
     }
 })
