@@ -6,36 +6,203 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            display: flex;
+            background-color: black;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .conta-header {
+            width: 100%;
+        }
+
+        .logo img {
+            width: 50px;
+            border-radius: 20px;
+        }
+
+        form {
+            width: 100%;
+            max-width: 1440px;
+            display: inline;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .add-btn {
+            background-color: green;
+            padding: 6px 17px;
+            border: 0;
+            border-radius: 8px;
+            color: white;
+            font-size: 19px;
+            margin: 50px;
+        }
+
+        .input {
+            margin: 15px 0;
+            width: 100%;
+            padding: 8px 0;
+            border-radius: 10px;
+        }
+
+        .container {
+            width: 40%;
+            top: 0;
+            margin: 0 auto;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 5px 0;
+            margin: 15px 0;
+            font-size: large;
+            border-radius: 10px;
+            cursor: pointer;
+            border: 0;
+        }
+
+        .parent {
+            border-radius: 12px;
+            box-shadow: 5px 10px 30px black;
+            display: flex;
+            gap: 2px;
+            flex-direction: column;
+            width: 60%;
+            display: none;
+        }
+
+        .card {
+            display: flex;
+            /* text-align: center; */
+        }
+
+        .cart {
+            margin-left: 0px;
+            width: 30%;
+            border: 1px solid red;
+        }
+
+        .cart h3 {
+            padding: 25px 0;
+        }
+
+        .cart p {
+            padding: 25px 0;
+        }
+
+        .cart img {
+            width: 100%;
+            height: 250px;
+        }
+
+        .cart .name {
+            width: 100%;
+            text-align: center;
+        }
+
+        .conta-header {
+            display: flex;
+            gap: 55px;
+        }
+
+        ul {
+            display: flex;
+            list-style: none;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .icon {
+            align-items: center;
+            padding-top: 16px;
+            font-size: 20px;
+        }
+
+
+        .button {
+            padding: 5px 15px;
+        }
+
+        .button-form {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    </style>
 </head>
 
 <body>
-    <button class="add-btn">Add</button>
 
-    <form action="">
-        
-        <div class="parent">
+    <header>
+        <div class="conta-header">
+            <div class="logo">
+                <a href="file:///C:/Users/ACER/OneDrive/%C4%B0%C5%9F%20masas%C4%B1/js-tasks/post/index.html"><img
+                src="./256x256bb.jpg" alt=""></a>
+            </div>
+            <ul>
+                <li>Home</li>
+                <li>Link</li>
+                <li>About</li>
+            </ul>
+
+            <div class="icon">
+                <i class="fa-solid fa-basket-shopping"></i>
+            </div>
+
+        </div>
+        <div style="display: flex; padding: 15px; gap: 5px; margin-right: 100px;">
+            <input type="search" style="border-radius: 5px; border: 0;">
+            <button
+                style="border: 1px solid lime; border-radius: 5px; background-color: black; color: white;">Search</button>
+        </div>
+    </header>
+
+    <div class="a" style="display: flex;">
+        <div class="div">
+            <button class="add-btn">+Add</button>
+        </div>
+
+
+        <form action="">
+
             <div class="container">
-
-                <input class="input" type="text" name="name">
-                <input class="input2" type="file" src="file" name="image" id="image">
-                <button class="btn">Submit</button>
+                <div class="parent">
+                    <div style="position: relative; padding: 10px 0;">
+                        <i style="font-size: 25px; position: absolute; top: 5px; right: 0;"
+                            class="close fa-solid fa-circle-xmark"></i>
+                    </div>
+                    <input class="input input1" type="text" name="name">
+                    <label for="input-image"></label>
+                    <input class="input input2" type="file" accept="image/png, image/jpeg, image/jpg" id="input-image">
+                    <input class="input input3" type="number">
+                    <button class="btn">Submit</button>
+                </div>
             </div>
-        </div>
-    </form>
-
-
-
-    <div class="card">
-        <div class="cart">
-            <div class="image">
-
-            </div>
-            <div class="name">
-                
-            </div>
-        </div>
+        </form>
     </div>
+
+
+
+    <div class="card"
+        style="display: flex; gap: 20px; justify-content: space-between; padding-bottom: 50px; z-index: 99; flex-wrap: wrap;">
+
+    </div>
+
+
     <script src="./app.js"></script>
 </body>
 
