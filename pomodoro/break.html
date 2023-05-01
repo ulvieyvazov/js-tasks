@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color: white;
+            list-style: none;
+        }
+
+        body {
+            background-color: #38858a;
+        }
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .parent {
+            width: 50%;
+            margin: 0 auto;
+        }
+
+
+        .nav {
+            width: 100%;
+            display: flex;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+        }
+
+        .logo {
+            width: 50%;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 20px;
+            height: 20px;
+        }
+
+        .nav-bar {
+            width: 50px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .nav-bar button {
+            padding: 2px 15px;
+            display: flex;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.4);
+            border-radius: 5px;
+            border: 0;
+            opacity: inherit;
+        }
+
+        .nav-bar img {
+            width: 20px;
+            height: 20px;
+            margin-right: 3px;
+        }
+
+        .main {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 55px;
+        }
+
+        .start-parent {
+            background: rgba(255, 255, 255, 0.19);
+            border-radius: 16px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.21);
+        }
+
+        .main-parent {
+            margin-top: 44px;
+        }
+
+        .main-nav {
+            width: 100%;
+            text-align: center;
+        }
+
+        .main-nav div {
+            font-size: 120px;
+            font-weight: 500;
+        }
+
+        .main-nav button {
+            font-size: 17px;
+            background-color: transparent;
+            border: 0;
+            margin: 0 15px;
+            cursor: pointer;
+        }
+
+        .start {
+            margin-top: 35px;
+            width: 100%;
+            justify-content: center;
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        #pause {
+            display: none;
+            padding: 15px 48px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 0;
+            margin-bottom: 10px;
+            color: #38858a;
+            cursor: pointer;
+        }
+
+        .start .btn-start {
+            padding: 15px 48px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: 0;
+            margin-bottom: 10px;
+            color: #38858a;
+            cursor: pointer;
+        }
+
+        .next {
+            display: none;
+        }
+
+        .next img {
+            width: 30px;
+            cursor: pointer;
+        }
+
+        .tasks {
+            display: flex;
+            justify-content: space-between;
+            font-size: large;
+            border-bottom: 1px solid white;
+            padding-bottom: 10px;
+        }
+
+        .task-img img {
+            width: 30px;
+        }
+
+        .add {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            justify-content: center;
+            margin-top: 30px;
+            border: 2px dashed rgba(255, 255, 255, 0.4);
+            background-color: rgba(0, 0, 0, 0.1);
+            padding: 15px 0;
+        }
+
+        .add img {
+            width: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="parent">
+                <div class="nav">
+                    <div class="logo">
+                        <a href="C:\Users\ACER\OneDrive\İş masası\js-tasks\pomodoro\index.html"><img
+                                src="./icon-white2.png" alt=""></a>
+                        <h1>Pomofocus</h1>
+                    </div>
+
+                    <div class="nav-bar">
+                        <button>
+                            <img src="./icon-white2.png" alt="">
+                            <p>Report</p>
+                        </button>
+                        <button>
+                            <img src="./config-white.png" alt="">
+                            <p>Setting</p>
+                        </button>
+                        <button>
+                            <img src="./graph-white.png" alt="">
+                            <p>Login</p>
+                        </button>
+                    </div>
+                </div>
+
+
+
+                <div class="main">
+                    <div class="main-parent">
+                        <div class="start-parent">
+
+                            <div class="main-nav">
+                                <a href="./index.html" style="text-decoration-line: none;">
+                                    <button>Pomodoro</button>
+                                </a>
+                                <a href="./break.html" style="text-decoration-line: none;">
+                                    <button class="break" style="background-color: rgba(0, 0, 0, 0.3);">Short Break</button>
+                                </a>
+                                <a href="./long.html">
+                                    <button class="long">Long Break</button>
+                                </a>
+                                <div id="time">5:00</div>
+                            </div>
+
+                            <div class="start">
+                                <button class="btn-start">START</button>
+                                <button id="pause">PAUSE</button>
+                                <div class="next">
+                                    <a href="./long.html">
+                                        <button><img src="./next-white3.png" alt=""></button>
+                                    </a>                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="" style="text-align: center; margin: 20px 0;">
+                            <div>#0</div>
+                            <div>Time for a break!</div>
+                        </div>
+
+
+                        <div class="tasks">
+                            <span>Tasks</span>
+                            <div class="task-img"><img src="./threedots-white.png" alt=""></div>
+                        </div>
+
+                        <div class="add">
+                            <img src="./plus-circle-white.png" alt="">
+                            <div>Add Task</div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+
+
+    <script src="./break.js"></script>
+</body>
+
+</html>

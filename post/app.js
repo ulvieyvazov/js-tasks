@@ -16,6 +16,10 @@ console.log(input3);
 icon.addEventListener("click", () => {
     parent.style.display = "none"
 })
+if (localStorage.getItem("users") === null) {
+    localStorage.setItem("users", JSON.stringify([]));
+}
+
 form.addEventListener("submit", (e) => {
     if (input1.value.trim() && input3.value.trim()) {
         // card.style.display = "block"
@@ -37,9 +41,9 @@ form.addEventListener("submit", (e) => {
         // img.src = input2.src 
         // input2.addEventListener("change", ()=>{
 
-        //     const reader =new FileReader();
+        //     const reader =new FileReader();    
         //     reader.addEventListener("load", ()=>{
-        //         uploaded = reader.result;
+        //         uploaded = reader.result;    
         //         document.querySelector(".cart").style.backgroundImage = `url(${uploaded})`;
 
         //     })
@@ -60,29 +64,27 @@ form.addEventListener("submit", (e) => {
         cart.append(img, h3, p, cardForm);
         card.appendChild(cart);
 
+        const praducts = JSON.parse(localStorage.getItem("praducts")) || []
+
+        praducts.push({
+            photo: img.src,
+            Name: h3.innerText,
+            price: p.innerText,
+        })
+
+        localStorage.setItem("praducts", JSON.stringify(praducts))
+        JSON.parse(localStorage.getItem(praducts))
+        // cart.append(photo, Name, price)
     }
     else {
         alert("bosh ola bilmez")
     }
 
-    if (localStorage.getItem("users") === null) {
-        localStorage.setItem("users", JSON.stringify([]));
-        const praducts = JSON.parse(localStorage.getItem("praducts"))
-    
-        praducts.push({
-            photo: img.src,
-            Name: h3,
-            price: p,
-        })
-    
-        localStorage.setItem("praducts", JSON.stringify(praducts))
-    
-        console.log(praducts);
-    }
+
 })
 // button2.addEventListener("click", ()=>{
-//     for (let i = 0; i < cart.length; i++) {
-//         body.style.backgroundColor = "red"
-//     }
-// })
+    //     for (let i = 0; i < cart.length; i++) {
+        //         body.style.backgroundColor = "red"
+        //     }
+        // })
 
