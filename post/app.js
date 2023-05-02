@@ -82,9 +82,23 @@ form.addEventListener("submit", (e) => {
 
 
 })
-// button2.addEventListener("click", ()=>{
-    //     for (let i = 0; i < cart.length; i++) {
-        //         body.style.backgroundColor = "red"
-        //     }
-        // })
+button.addEventListener("click", () => {
+    let cart = [];
+
+    cart.push({ names, price });
+    updateCart();
+
+    function updateCart() {
+        const cartItems = document.createElement("ul");
+        cartItems.innerHTML = "";
+        let totalPrice = 0;
+        cart.forEach(item => {
+            const li = document.createElement("li");
+            li.innerText = `${item.names} - $${item.price}`;
+            cartItems.appendChild(li);
+            totalPrice += item.price;
+        });
+        document.createElement("p").innerText = `Toplam Fiyat: $${totalPrice}`;
+    }
+})
 

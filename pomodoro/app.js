@@ -15,7 +15,7 @@ start.addEventListener("click", () => {
         if (promodorSeconds > -1) {
             time.innerHTML = `${min > 9 ? min : `0${min}`}:${sec > 9 ? sec : `0${sec}`}`
         }
-
+        
         if (promodorSeconds <= -1) {
             time.innerHTML == "00:00"
         }
