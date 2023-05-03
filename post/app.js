@@ -81,13 +81,11 @@ form.addEventListener("submit", (e) => {
     }
 
 
-})
-button.addEventListener("click", () => {
     let cart = [];
-
+    
     cart.push({ names, price });
     updateCart();
-
+    
     function updateCart() {
         const cartItems = document.createElement("ul");
         cartItems.innerHTML = "";
@@ -101,4 +99,5 @@ button.addEventListener("click", () => {
         document.createElement("p").innerText = `Toplam Fiyat: $${totalPrice}`;
     }
 })
-
+button.addEventListener("click", () => {
+})

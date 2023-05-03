@@ -5,6 +5,7 @@ const start = document.querySelector(".btn-start")
 const pause = document.querySelector("#pause");
 const br = document.querySelector(".break")
 const next = document.querySelector(".next")
+const count = document.querySelector(".count")
 start.addEventListener("click", () => {
     time.style.display = "hiden"
     const Countdown = () => {
@@ -35,7 +36,7 @@ start.addEventListener("click", () => {
     }
     next.style.display = "block"
     next.addEventListener("click", () => {
-
+        count.style.innerHTML = "1"
     })
 
     pause.addEventListener("click", myStop)
