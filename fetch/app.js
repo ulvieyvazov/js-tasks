@@ -39,7 +39,7 @@ async function getGit() {
                 <div class="main">
                 <div class="repos">
                 repos
-                <div>  </div>
+                <div> ${data.public_repos} </div>
                 </div>
                 
                 <div class="follow">
