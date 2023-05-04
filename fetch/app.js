@@ -13,10 +13,10 @@ async function getGit() {
         jsonData
             .forEach((element) => {
                 console.log(element);
-                fetch(`${element.followers_url}`)
+                fetch(`${element.url}`)
                     .then((resp) => resp.json())
                     .then((data) => {
-                            container.innerHTML += `
+                        container.innerHTML += `
      <div class="cart">
         <div class="top">
             <div class="logo">
@@ -26,15 +26,15 @@ async function getGit() {
 
             <div class="text">
                 <h2>The Octocat</h2>
+                <div class="login">
+                ${data.created_at}
+                </div>
             </div>
                 
-                <div class="login">
-                
-                </div>
                 
             </div>
                 <a href="">@octocat</a>
-                <p>This profile has no bio</p>
+                <p>${data.bio}</p>
                 
                 <div class="main">
                 <div class="repos">
@@ -44,12 +44,12 @@ async function getGit() {
                 
                 <div class="follow">
                 followers
-                <div>  </div>
+                <div> ${data.followers} </div>
                 </div>
                 
                 <div class="following">
                 following
-                <div>  </div>
+                <div> ${data.following} </div>
                 </div>
         </div>
 
