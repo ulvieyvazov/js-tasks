@@ -54,12 +54,12 @@ async function getGit() {
         </div>
 
         <div class="nav">
-        <div class="navication ">
-
+            <div class="navication ">
+                ${data.location}
             </div>
 
             <div class="twitt">
-            
+            ${data.caged}
             </div>
 
             <div class="github">
@@ -69,6 +69,7 @@ async function getGit() {
             <div class="git">
             
             </div>
+            
             </div>
             </div>`
                     })
