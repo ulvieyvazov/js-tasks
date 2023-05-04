@@ -29,7 +29,9 @@
 
         header {
             border: 1px solid black;
-            width: 80%;
+            background-color: rgb(224, 223, 255);
+            border-radius: 8px;
+            width: 100%;
             margin: 0 auto;
             margin-bottom: 80px;
         }
@@ -40,13 +42,19 @@
         }
 
         header input {
-            width: 80%;
+            width: 78%;
             padding: 5px 0;
+            background-color: transparent;
+            border: 0;
+            outline: none;
+            font-size: large;
         }
 
         header button {
-
+            background-color: aqua;
+            border: 0;
             padding: 5px 10px;
+            font-size: large;
         }
 
         .top {
@@ -107,6 +115,9 @@
     <section>
         <div class="container">
             <header>
+                <i style="m" class="fa-solid fa-magnifying-glass"></i>
+                
+                
                 <input type="search" placeholder="Search GitHub">
                 <button>Search</button>
             </header>
